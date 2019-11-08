@@ -1,6 +1,6 @@
 /*!
  * Mux Video
- * Copyright(c) 2018 Mux Inc.
+ * Copyright(c) 2019 Mux Inc.
  */
 
 const Assets = require('./resources/assets');
@@ -8,6 +8,7 @@ const Base = require('../base');
 const LiveStreams = require('./resources/liveStreams');
 const Uploads = require('./resources/uploads');
 const SigningKeys = require('./resources/signingKeys');
+const DeliveryUsage = require('./resources/deliveryUsage');
 
 /**
  * @ignore
@@ -46,6 +47,9 @@ class Video extends Base {
 
     /** @Type {SigningKeys} */
     this.SigningKeys = new SigningKeys(this);
+    
+    /** @Type {DeliveryUsage} */
+    this.DeliveryUsage = new DeliveryUsage(this);
   }
 }
 
